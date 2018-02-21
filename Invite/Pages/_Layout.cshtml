@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
 
-    <environment>         
-        <link href="~/css/StyleSheet.css" rel="stylesheet" />"">
+    <environment>
+        <link href="~/css/StyleSheet.css" rel="stylesheet" />
         <link href="~/css/random.css" rel="stylesheet" />
     </environment>
     <environment>
@@ -16,16 +16,16 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body>      
+<body>
     <header class="w3-display-container w3-wide bgimg w3-grayscale-min" id="home">
-        <div class="w3-display-middle w3-center text-shadow">            
+        <div class="w3-display-middle w3-center text-shadow">
             @RenderSection(name: "CustomHeaderSection")
         </div>
     </header>
 
 
     <div class="container body-content">
-        @RenderBody()       
+        @RenderBody()
     </div>
 
     <environment>
