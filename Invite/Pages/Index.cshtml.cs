@@ -42,7 +42,7 @@ namespace Invite.Pages
         {           
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress("RSVPbyEmail", EmailRSVP.Email));
-            message.To.Add(new MailboxAddress("RSVPtoEmail", "chethan.2803@gmail.com"));
+            message.To.Add(new MailboxAddress("RSVPtoEmail", "cheresdb@gmail.com"));
             message.Subject = "Marriage RSVP";
             message.Body = new TextPart("plain")
             {
