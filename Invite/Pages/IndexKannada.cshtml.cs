@@ -51,7 +51,7 @@ namespace Invite.Pages
             using (var client = new MailKit.Net.Smtp.SmtpClient())
             {
                 client.Connect("smtp.gmail.com", 587, false);
-                client.Authenticate("cheres.2803@gmail.com", "uhgrpsmjjnjbnkkc");
+                client.Authenticate("cheresdb.2803@gmail.com", "uhgrpsmjjnjbnkkc");
                 client.Send(message);
                 client.Disconnect(true);
             }
