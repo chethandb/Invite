@@ -1,19 +1,19 @@
 ﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 using System.ComponentModel.DataAnnotations;
 
 namespace Invite.Pages
 {
-    public class IndexModel : PageModel
+    public class IndexKannadaModel : PageModel
     {
         public void OnGet()
         {
-            
+
         }
         [BindProperty]
-        public EmailRSVPFormModel EmailRSVP { get; set; }
+        public KannadaEmailRSVPFormModel KannadaEmailRSVP { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {
@@ -23,15 +23,15 @@ namespace Invite.Pages
             }
 
             // create and send the mail here
-            var mailbody = $@"RSVP by,
+            var mailbody = $@"Kannada RSVP by,            
 
-            Name: {EmailRSVP.Name}            
-            Email: {EmailRSVP.Email}
-            Message: ""{EmailRSVP.Message}""
+            Name: {KannadaEmailRSVP.Name}           
+            Email: {KannadaEmailRSVP.Email}
+            Message: ""{KannadaEmailRSVP.Message}""
 
             Cheers,
             Chethan
-            ";
+           ";
 
             SendMail(mailbody);
 
@@ -39,11 +39,11 @@ namespace Invite.Pages
         }
 
         private void SendMail(string mailbody)
-        {           
+        {
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("RSVPbyEmail", EmailRSVP.Email));
+            message.From.Add(new MailboxAddress("RSVPbyEmail", KannadaEmailRSVP.Email));
             message.To.Add(new MailboxAddress("RSVPtoEmail", "chethan.2803@gmail.com"));
-            message.Subject = "Marriage RSVP";
+            message.Subject = "Kannada marriage RSVP";
             message.Body = new TextPart("plain")
             {
                 Text = mailbody
@@ -58,7 +58,7 @@ namespace Invite.Pages
         }
     }
 
-    public class EmailRSVPFormModel
+    public class KannadaEmailRSVPFormModel
     {
         [Required]
         public string Name { get; set; }        
@@ -68,3 +68,4 @@ namespace Invite.Pages
         public string Message { get; set; }
     }
 }
+
