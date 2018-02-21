@@ -752,9 +752,9 @@ a {
         position: relative
     }
 
-    .w3-hide-small {
+    /*.w3-hide-small {
         display: none !important
-    }
+    }*/
 
     .w3-mobile {
         display: block;

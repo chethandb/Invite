@@ -49,3 +49,10 @@ p {
     color: #fff !important;
     background-color: #BA55D3 !important;
 }
+
+@media (max-width:600px) {
+    .w3-hide-small {
+        display: block !important;
+        font-size: 12px;
+    }
+}
