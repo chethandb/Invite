@@ -42,7 +42,7 @@ namespace Invite.Pages
         {           
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress("RSVPbyEmail", EmailRSVP.Email));
-            message.To.Add(new MailboxAddress("RSVPtoEmail", "cheresdb@gmail.com"));
+            message.To.Add(new MailboxAddress("RSVPtoEmail", "your_email@gmail.com"));
             message.Subject = "Marriage RSVP";
             message.Body = new TextPart("plain")
             {
@@ -51,7 +51,7 @@ namespace Invite.Pages
             using (var client = new MailKit.Net.Smtp.SmtpClient())
             {
                 client.Connect("smtp.gmail.com", 587, false);
-                client.Authenticate("cheresdb.2803@gmail.com", "uhgrpsmjjnjbnkkc");
+                client.Authenticate("your_email@gmail.com", "your_passwd");
                 client.Send(message);
                 client.Disconnect(true);
             }
