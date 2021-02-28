@@ -4,3 +4,6 @@ Templates are swappable for English and Kannada content.
 
 PS: Just wanted to build an app and host it on Azure to invite people for my wedding in a very short time ;) 
     
+Snippets:
+
+![image](https://user-images.githubusercontent.com/25240279/109436905-a6561e00-79e7-11eb-8f60-75c017cdcb10.png)
